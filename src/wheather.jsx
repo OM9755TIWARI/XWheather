@@ -4,7 +4,7 @@ import "./Wheather.css";
 
 const WheatherCard = ({title, data}) => {
     return (
-        <div className="wheather-card">
+        <div className="weather-card">
             <h3>{title}</h3>
             <p>{data}</p>
         </div>
@@ -43,7 +43,7 @@ export default function Wheather(){
 
 
     return(
-        <div className="wheather-display">
+        <div className="weather-display">
             <h1>XWheatherApp</h1>
             <form onSubmit={handleSearch} className="search-bar">
                 <input 
@@ -57,7 +57,7 @@ export default function Wheather(){
             {loading && <p>Loading data...</p>}
             {error && <p>{error}</p>}
             {wheatherData && (
-                <div className="wheather-cards">
+                <div className="weather-cards">
                     <WheatherCard 
                         title="Temperature"
                         data={`${wheatherData.current.temp_c}°C`}
